@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+body{
+
+  font-family: Roboto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(to right, #ec812a, #e32ce3);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 29vw;
+  background: white;
+  border-radius: 0;
+}
+
+.center h1{
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+.center form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+form .txt_field{
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+
+.txt_field input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.txt_field span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  background: rgb(2, 2, 2);
+  transition: .5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+  top: -5px;
+  color: rgb(2, 2, 2);
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:Valid ~ span::before{
+  width: 100%;
+}
+
+.pass{
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+
+.pass:hover{
+  text-decoration: underline;
+}
+
+input[type="Submit"]{
+  width: 100%;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+input[type="Submit"]:hover{
+  background: #2691d9;
+  color: #e9f4fb;
+  transition: .5s;
+}
+
+.signup_link{
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #8d8181;
+}
+
+.signup_link a{
+  color: #2691d9;
+  text-decoration: none;
+}
+
+.signup_link a:hover{
+  text-decoration: underline;
+}
+
+.HomeAbout{
+  width: 100vw;
+  height: 25vh;
+}
+
+.dashboard-container {
+  display: flex;
+  margin-top: -20px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.expense-box {
+
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.expense-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.expense-box p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.expense-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.expense-box ul li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.expense-box strong {
+
+  font-weight: bold;
+}
+
+.expense-box {
+  position: relative;
+}
+
+.expense-box:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #eee;
+}
+
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid white;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  color: black;
+  font-weight: bolder;
+  background-color: #5bd485;
+}
+
+
+.rounded-blocks {
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 80%;
+  width: 80%;
+}
+
+.center-section {
+  flex: 2 1;
+  padding: 20px;
+  background: #fff;
+  border: 2px solid #333;
+}
+
+.button-section {
+  display: flex;
+  padding-left: 100px; /* Adjust the padding if needed */
+  padding-right: 100px; /* Adjust the padding if needed */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action-button {
+  padding: 20px 30px; /* Increase padding for a larger button */
+  font-size: 16px; /* Increase font size for larger text */
+  background-color: #34c063;
+  color: #fff;
+  border: none;
+  border-radius: 12px; /* Increase border-radius for rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button action-button settle-up{
+  padding: 20px 30px; /* Increase padding for a larger button */
+  font-size: 16px; /* Increase font size for larger text */
+  background-color: #e81b22;
+  color: #fff;
+  border: none;
+  border-radius: 12px; /* Increase border-radius for rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button3 {
+  padding: 20px 30px; /* Increase padding for a larger button */
+  font-size: 16px; /* Increase font size for larger text */
+  background-color: blue;
+  color: #fff;
+  border: none;
+  border-radius: 12px; /* Increase border-radius for rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  right: 260px;
+  bottom: 170px;
+}
+
+.info-boxes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+.info-box {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #99d9e9; /* Unique and attractive color */
+    margin-right: 20px;
+    align-items: center;
+    width: 17vw;
+    height: 40vh;
+  }
+  
+
+.infotext{
+  margin-top: 10vh;
+  font-size: x-large;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(20, 20, 20);
+}
+
+.info-box:last-child {
+  margin-right: 0; /* Remove margin for the last box */
+}
+
+.owe-list {
+  margin-top: 20px;
+}
+
+.owe-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.owe-list li {
+  padding: 5px;
+}
+
+.right-section {
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+  border: 2px solid #333;
+}
+
+.activities {
+    color: #d0314c;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.activities ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.activities li {
+  padding: 5px;
+}
+
+.nav-bar .logo a{
+  font-weight:  700;
+  font-size: 24px;
+  letter-spacing: 3px;
+  color: #fff;
+}
+
+.nav-bar .logo a span{
+  color: #5bd485;
+}
+
+.nav-bar ul li a:hover,
+.nav-bar ul li a:active{
+  background: #5bd485;
+}
+
+/* Add these styles to your existing CSS */
+
+.owe-list {
+  display: flex;
+}
+
+.your-owe,
+.your-own,
+.activities{
+  flex: 1;
+  margin-right: 10px; /* Add margin to create space between the divs */
+  color: #d13333;
+  padding: 10px;
+}
+
+.your-own {
+  margin-right: 0; /* Remove margin for the last div */
+}
+
+.h2{
+  color: rgb(10, 10, 10);
+  text-transform: uppercase;
+}
+
+/* Settle.css */
+
+.addGroupContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.addMemberButton,
+.removeMemberButton,
+.submitButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.addMemberButton:hover,
+.removeMemberButton:hover,
+.submitButton:hover {
+  background-color: #45a049;
+}
+
+.memberItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 8px;
+  margin: 4px 0;
+  border-radius: 4px;
+  color: rgb(9, 1, 1);
+}
+
+/* AddExpenseForm.css (or your preferred CSS file) */
+
+.form-element {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.select,
+.input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.input[type="number"] {
+  /* Add specific styles for number input if needed */
+}
+
+.error {
+  color: #ff0000;
+  margin-top: 5px;
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.Dashboard-uname{
+  color: rgb(23, 22, 22);
+  font-size: 2.5rem;
+}
+
+.username {
+  font-size: 2.5rem;
+}
+
+
+.activities {
+  overflow-y: auto; /* Add scrollbar if content overflows vertically */
+  max-height: 400px; /* Define the maximum height for the container */
+}
+
+.expense-box {
+  /* Your existing styles for expense boxes */
+}
+
+.activities table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+.activities th,
+.activities td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #1e88e5; /* Blue color for table borders */
+}
+
+.activities th {
+  background-color: #f2f2f2; /* Light gray background for table headers */
+  color: #333; /* Dark text color for table headers */
+}
+
+.activities tbody tr:nth-child(even) {
+  background-color: #f5f5f5; /* Light gray background for even rows */
+}
+
+.activities tbody tr:hover {
+  background-color: #e0e0e0; /* Light gray background for hovered rows */
+}
+.table-wrapper {
+  overflow-y: auto; /* Add scrollbar if content overflows vertically */
+  max-height: 400px; /* Define the maximum height for each table */
+  margin-bottom: 20px; /* Add margin between tables */
+  border-bottom: 5px solid #050505; /* Draw a horizontal line below each table */
+}
